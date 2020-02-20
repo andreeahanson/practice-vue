@@ -1,16 +1,37 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Todos />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Todos from './components/Todos.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Todos
+  },
+  data() {
+    return {
+      todos: [
+        {
+          id: 1,
+          title: "To do one",
+          completed: false
+        },
+        {
+          id: 2,
+          title: "To do two",
+          completed: true
+        },
+        {
+          id: 3,
+          title: "To do three",
+          completed: false
+        },
+      ]
+    }
   }
 }
 </script>
